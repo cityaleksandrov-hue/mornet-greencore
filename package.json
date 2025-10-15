@@ -1,0 +1,50 @@
+{
+  "name": "mornet-greencore",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MorNet GreenCore - Морфогенетическая сеть для экосистемы GreenCore",
+  "keywords": [
+    "blockchain",
+    "tokenization",
+    "energy",
+    "greencore",
+    "mornet",
+    "erc1155",
+    "erc20",
+    "defi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cityaleksandrov-hue/mornet-greencore.git"
+  },
+  "license": "UNLICENSED",
+  "author": "MorNet GreenCore Team <dev@mornet-greencore.io>",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.12.0"
+}
+
