@@ -1,4 +1,4 @@
-# MorNet GreenCore
+# MorfNet GreenCore
 
 **Морфогенетическая сеть для экосистемы GreenCore**
 
