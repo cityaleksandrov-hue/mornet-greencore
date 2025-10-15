@@ -283,22 +283,22 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  subgraph Frontend
-    R[Public App (React/Next.js)\nUser Portal]
-    V[Admin App (Vue 3 + Naive UI)\nOps & Treasury]
+  subgraph "Frontend"
+    R["Public App (React/Next.js)\nUser Portal"]
+    V["Admin App (Vue 3 + Naive UI)\nOps & Treasury"]
   end
 
-  subgraph Core Backend (MorNet)
-    A[API Gateway / Auth]
-    I[Identity / SSO]
-    W[Wallet Service]
-    T[Token Engine]
-    D[Treasury / DAO]
-    X[Exchange Router]
-    G[GC-Guard Adapter]
+  subgraph "Core Backend (MorNet)"
+    A["API Gateway / Auth"]
+    I["Identity / SSO"]
+    W["Wallet Service"]
+    T["Token Engine"]
+    D["Treasury / DAO"]
+    X["Exchange Router"]
+    G["GC-Guard Adapter"]
   end
 
-  subgraph Bank/CBDC
+  subgraph "Bank/CBDC"
     B[(Bank API — ISO 20022)]
     C[(CBDC Platform)]
   end
