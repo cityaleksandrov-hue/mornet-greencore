@@ -1,4 +1,23 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  # Frontend Applications
+  - 'apps/frontends/*'
+  
+  # Core Services
+  - 'apps/core/*'
+  
+  # Integration Services
+  - 'apps/integrations/*'
+  
+  # IoT Devices
+  - 'apps/iot/*'
+  
+  # Shared Packages
+  - 'packages/shared'
+  - 'packages/ui-kit'
+  - 'packages/smart-contracts'
+  - 'packages/api-schemas'
+  - 'packages/config'
+  
+  # Sector Plugins
+  - 'packages/sector-plugins/*'
 

@@ -64,25 +64,36 @@
 ```
 mornet-greencore/
 ├── apps/                       # Приложения
-│   ├── admin-ui/              # Admin панель (Vue 3)
-│   ├── public-ui/             # Публичный портал (React)
-│   ├── identity-service/      # Identity/SSO сервис
-│   ├── wallet-service/        # Wallet сервис
-│   ├── token-engine/          # Token Engine
-│   ├── oracle-service/        # Oracle Service
-│   ├── dao-treasury/          # DAO Treasury
-│   ├── exchange-router/       # Exchange Router
-│   ├── bank-gateway/          # Bank Gateway
-│   ├── gcguard-adapter/       # GC-Guard Adapter
-│   ├── analytics-service/     # Analytics Service
-│   ├── api-gateway/           # API Gateway
-│   └── edge-agent/            # Edge Agent
+│   ├── core/                  # Core Services (sector-agnostic)
+│   │   ├── identity-service/  # Identity/SSO сервис
+│   │   ├── wallet-service/    # Wallet сервис
+│   │   ├── token-engine/      # Token Engine
+│   │   ├── cost-engine/       # Cost Engine (NEW!)
+│   │   ├── oracle-service/    # Oracle Service
+│   │   ├── dao-treasury/      # DAO Treasury
+│   │   ├── analytics-service/ # Analytics Service
+│   │   └── api-gateway/       # API Gateway
+│   ├── integrations/          # External integrations
+│   │   ├── bank-gateway/      # Bank Gateway
+│   │   ├── exchange-router/   # Exchange Router
+│   │   └── gcguard-adapter/   # GC-Guard Adapter
+│   ├── frontends/             # Frontend apps
+│   │   ├── admin-ui/          # Admin панель (Vue 3)
+│   │   └── public-ui/         # Публичный портал (React)
+│   └── iot/                   # IoT devices
+│       └── edge-agent/        # Edge Agent
 ├── packages/                   # Общие библиотеки
 │   ├── shared/                # Общие утилиты и типы
 │   ├── ui-kit/                # UI компоненты
 │   ├── smart-contracts/       # Smart Contracts (Solidity)
 │   ├── api-schemas/           # OpenAPI схемы, Zod валидация
-│   └── config/                # Общие конфигурации
+│   ├── config/                # Общие конфигурации
+│   └── sector-plugins/        # Sector-specific plugins (NEW!)
+│       ├── residential/       # Residential sector (MVP 1.0)
+│       ├── tourism/           # Tourism sector (MVP 2.0)
+│       ├── agriculture/       # Agriculture sector (MVP 3.0)
+│       ├── manufacturing/     # Manufacturing sector (MVP 4.0)
+│       └── municipal/         # Municipal sector (MVP 5.0)
 ├── infra/                      # Инфраструктура
 │   ├── docker/                # Docker Compose
 │   ├── kubernetes/            # Kubernetes манифесты

@@ -4,29 +4,46 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "build/**"]
+      "outputs": ["dist/**", ".next/**", "build/**"],
+      "env": ["NODE_ENV"]
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^lint"],
+      "outputs": []
     },
     "typecheck": {
-      "dependsOn": ["^typecheck"]
+      "dependsOn": ["^typecheck"],
+      "outputs": []
     },
     "test": {
       "dependsOn": ["^build"],
-      "outputs": ["coverage/**"]
+      "outputs": ["coverage/**"],
+      "env": ["NODE_ENV", "DATABASE_URL"]
     },
     "test:watch": {
       "cache": false,
       "persistent": true
     },
+    "test:e2e": {
+      "dependsOn": ["^build"],
+      "outputs": ["test-results/**"],
+      "env": ["NODE_ENV", "DATABASE_URL", "API_URL"]
+    },
     "clean": {
       "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["build", "test"],
+      "outputs": []
     }
-  }
+  },
+  "globalEnv": [
+    "NODE_ENV",
+    "CI"
+  ]
 }
 
