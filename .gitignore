@@ -21,13 +21,19 @@ out/
 .env.production.local
 
 # Logs
-logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+# Project logs (excluding SmartHome Node Markdown diaries)
+logs/**/*.log
+logs/**/*.jsonl
+logs/**/*.gz
+!logs/smarthome-node01/**/*.md
+!logs/**/README.md
 
 # OS
 .DS_Store
